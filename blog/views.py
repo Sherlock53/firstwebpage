@@ -69,6 +69,7 @@ def add_comment_to_post(request, pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
+            comment.approve()
             return redirect('post_detail', pk=post.pk)
     else:
         form = CommentForm()
@@ -77,7 +78,6 @@ def add_comment_to_post(request, pk):
 @login_required
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
-    comment.approve()
     return redirect('post_detail', pk=comment.post.pk)
 
 @login_required
