@@ -1,32 +1,41 @@
 
 .page-header {
-    background-color: #FFF3EE;
+    background-color: #AAD3DD;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 0px 40px;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+.header-title, .header-title a, .header-title a:visited, .header-title a:active {
     color: #364c63;
     font-size: 36pt;
     text-decoration: none;
+    font-family: 'Roboto', cursive;
+    padding-left: 20px;
+}
+
+.blog-header-title, .blog-header-title a {
+    color: #364c63;
+    font-family: 'Roboto', cursive;
+    margin-bottom: .25rem;
+    font-size: 30px;
 }
 
 .content {
-    margin-left: 40px;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    margin-left: 80px;
 }
 
 .date {
-    float: right;
     color: #828282;
+}
 
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
 }
 
 .save {
     float: right;
+    font-size: 15px;
 }
 
 .post-form textarea, .post-form input {
@@ -34,10 +43,11 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #364c63;;
+    color: #364c63;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 20pt;
+    padding-right: 10px;
+    margin-bottom: -15px;
 }
 .edit-top {
   margin-right: 20px;
@@ -47,10 +57,48 @@ h1, h2, h3, h4 {
     margin-bottom: 70px;
 }
 
+
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
 
 .comment {
     margin: 20px 0px 20px 20px;
+    background-color: #f8f9fa;
+}
+
+.btn-default {
+  float: right;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-group-edit{
+  float: right;
+}
+
+.btn-edit{
+  padding: 10px 10px 10px 10px;
+}
+
+.btn-outline-secondary {
+    border-color: #364c63;
+}
+
+label {
+  font-size: 15px;
+  color: #364c63;
+}
+
+.p-6 {
+    padding: 1.5rem !important;
+    padding-bottom: 3.5rem !important;
+}
+
+.form-control{
+  border: 1px solid #AAD3DD;
 }
