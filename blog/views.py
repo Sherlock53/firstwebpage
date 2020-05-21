@@ -1,9 +1,13 @@
 from .models import Post, Comment
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
-from .forms import PostForm, CommentForm
+from .forms import PostForm, CommentForm,UserRegForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import login
+from django.http import HttpResponseRedirect
+
 
 # Create your views here.
 def post_list(request):
@@ -86,3 +90,17 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+
+def registration(request):
+    if request.method == "POST":
+        form = UserRegForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            new_user.save
+            # redirect, or however you want to get to the main view
+            return redirect('login')
+    else:
+        form = UserRegForm()
+
+    return render(request, 'registration/registration.html', {'form': form})

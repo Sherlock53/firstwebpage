@@ -6,13 +6,13 @@
 <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
 <html>
     <head>
-        <title>BOOOM</title>
+        <title>Family Blog</title>
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body class="bg-light">
         <div class="page-header navbar">
-          <div class="header-title mr-auto"><a href="{% url 'post_list' %}">Boom Blog</a></div>
+          <div class="header-title mr-auto"><a href="{% url 'post_list' %}">Family Blog</a></div>
 
           {% if user.is_authenticated %}
           <div class="nav-item dropdown top-menu">
